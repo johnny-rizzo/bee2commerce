@@ -169,7 +169,7 @@
                 <!-- SUBSTITUA PELA SUA IMAGEM -->
 
                 <img
-                    src="assets/sobre.jpg"
+                    src="assets/ChatGPT Image 4 de out. de 2026, 11_03_03.png"
                     alt="Sobre a Bee2Commerce">
 
             </div>
@@ -464,99 +464,134 @@
             </div>
 
 
-            <form class="contact-form" id="contactForm">
+           <form 
+    class="contact-form" 
+    id="contactForm"
+    action="https://api.web3forms.com/submit"
+    method="POST"
+>
 
-                <div class="form-group">
+    <!-- Chave do Web3Forms -->
+    <input 
+        type="hidden" 
+        name="access_key" 
+        value="eed6e00b-9f1f-4c7b-855b-66a4aca59e50"
+    >
 
-                    <input
-                        type="text"
-                        id="nome"
-                        placeholder=" "
-                        required>
+    <!-- Assunto do e-mail -->
+    <input 
+        type="hidden" 
+        name="subject" 
+        value="Novo contato - Bee2Commerce"
+    >
 
-                    <label for="nome">
-                        Nome
-                    </label>
+    <!-- Nome que aparecerá como remetente -->
+    <input 
+        type="hidden" 
+        name="from_name" 
+        value="Site Bee2Commerce"
+    >
 
-                </div>
+    <!-- Nome -->
+    <div class="form-group">
+        <input
+            type="text"
+            id="nome"
+            name="name"
+            placeholder=" "
+            required>
 
-
-                <div class="form-group">
-
-                    <input
-                        type="text"
-                        id="empresa"
-                        placeholder=" "
-                        required>
-
-                    <label for="empresa">
-                        Empresa
-                    </label>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder=" "
-                        required>
-
-                    <label for="email">
-                        E-mail
-                    </label>
-
-                </div>
+        <label for="nome">
+            Nome
+        </label>
+    </div>
 
 
-                <div class="form-group">
+    <!-- Empresa -->
+    <div class="form-group">
+        <input
+            type="text"
+            id="empresa"
+            name="empresa"
+            placeholder=" "
+            required>
 
-                    <input
-                        type="tel"
-                        id="telefone"
-                        placeholder=" "
-                        required>
-
-                    <label for="telefone">
-                        WhatsApp / Telefone
-                    </label>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <textarea
-                        id="mensagem"
-                        rows="5"
-                        placeholder=" "
-                        required></textarea>
-
-                    <label for="mensagem">
-                        Conte sobre sua empresa
-                    </label>
-
-                </div>
+        <label for="empresa">
+            Empresa
+        </label>
+    </div>
 
 
-                <button
-                    type="submit"
-                    class="hex-button yellow">
+    <!-- E-mail -->
+    <div class="form-group">
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder=" "
+            required>
 
-                    Quero meu orçamento gratuito
+        <label for="email">
+            E-mail
+        </label>
+    </div>
 
-                </button>
+
+    <!-- Telefone -->
+    <div class="form-group">
+        <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder=" "
+            required>
+
+        <label for="telefone">
+            WhatsApp / Telefone
+        </label>
+    </div>
 
 
-                <div
-                    id="formMessage"
-                    class="form-message">
-                </div>
+    <!-- Mensagem -->
+    <div class="form-group">
+        <textarea
+            id="mensagem"
+            name="message"
+            rows="5"
+            placeholder=" "
+            required></textarea>
 
-            </form>
+        <label for="mensagem">
+            Conte sobre sua empresa
+        </label>
+    </div>
 
+
+    <!-- Proteção contra spam -->
+    <input 
+        type="checkbox" 
+        name="botcheck" 
+        class="hidden" 
+        style="display: none;"
+    >
+
+
+    <!-- Botão -->
+    <button
+        type="submit"
+        class="hex-button yellow">
+
+        Quero meu orçamento gratuito
+
+    </button>
+
+
+    <div
+        id="formMessage"
+        class="form-message">
+    </div>
+
+</form>
         </section>
 
     </main>
