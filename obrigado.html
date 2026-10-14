@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2c1156">
+  <meta name="robots" content="noindex, follow">
+  <title>Mensagem enviada | Bee2Commerce</title>
+  <meta name="description" content="Obrigado por entrar em contato com a Bee2Commerce.">
+  <style>
+    :root {
+      --roxo: #2c1156;
+      --amarelo: #e0e017;
+      --texto: #211a2c;
+      --cinza: #655d70;
+      --fundo: #f7f6f9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(44, 17, 86, .07), transparent 28%),
+        var(--fundo);
+      color: var(--texto);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+    }
+
+    .confirmation {
+      position: relative;
+      isolation: isolate;
+      width: min(100%, 620px);
+      overflow: hidden;
+      padding: clamp(30px, 6vw, 56px);
+      text-align: center;
+      color: #fff;
+      background: var(--roxo);
+      border: 1px solid rgba(44, 17, 86, .12);
+      border-radius: 22px;
+      box-shadow: 0 18px 50px rgba(44, 17, 86, .16);
+    }
+
+    .confirmation::before,
+    .confirmation::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 210px;
+      height: 210px;
+      border: 1px solid rgba(224, 224, 23, .18);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .confirmation::before { top: -125px; right: -80px; }
+    .confirmation::after { bottom: -150px; left: -90px; }
+
+    .brand {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(25px, 5vw, 34px);
+      font-weight: 700;
+      letter-spacing: -.7px;
+      text-decoration: none;
+    }
+
+    .brand span { color: var(--amarelo); }
+
+    .checkmark {
+      display: grid;
+      place-items: center;
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 24px;
+      color: var(--roxo);
+      background: var(--amarelo);
+      border-radius: 50%;
+    }
+
+    .checkmark svg { width: 35px; height: 35px; }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(25px, 5vw, 34px);
+      line-height: 1.2;
+      letter-spacing: -.7px;
+    }
+
+    .lead {
+      max-width: 440px;
+      margin: 0 auto 12px;
+      color: #fff;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .detail {
+      max-width: 430px;
+      margin: 0 auto 30px;
+      color: #e6dff0;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 24px;
+      color: var(--roxo);
+      background: var(--amarelo);
+      border: 2px solid var(--amarelo);
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .home-link:hover {
+      background: #eeee48;
+      transform: translateY(-2px);
+    }
+
+    .home-link:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px;
+    }
+
+    .footer-note {
+      margin: 28px 0 0;
+      color: #cfc3df;
+      font-size: 12px;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 16px; }
+      .confirmation { border-radius: 16px; }
+      .lead { font-size: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="confirmation" aria-labelledby="confirmation-title">
+    <a class="brand" href="https://bee2commerce.com.br/" aria-label="Bee2Commerce — página inicial">
+      Bee<span>2</span>Commerce
+    </a>
+
+    <div class="checkmark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="m5 12.5 4.3 4.3L19.5 6.8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <h1 id="confirmation-title">Mensagem enviada com sucesso!</h1>
+    <p class="lead">Obrigado por entrar em contato com a Bee2Commerce.</p>
+    <p class="detail">Recebemos sua mensagem. Nossa equipe vai analisar as informações e entrar em contato com você o mais breve possível.</p>
+
+    <a class="home-link" href="https://bee2commerce.com.br/">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M19 12H5m7-7-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Voltar para o site
+    </a>
+
+    <p class="footer-note">Bee2Commerce · Parceria estratégica de vendas</p>
+  </main>
+</body>
+</html>
